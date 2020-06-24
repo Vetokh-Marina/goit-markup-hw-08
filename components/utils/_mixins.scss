@@ -1,0 +1,33 @@
+@mixin tranzition($v) {
+  transition: $v 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@mixin transform($s) {
+  transform: scale($s);
+}
+@mixin fonts($fw, $fs, $flh, $fls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $flh;
+  letter-spacing: $fls;
+}
+@mixin margin($mt, $mb) {
+  margin-top: $mt;
+  margin-bottom: $mb;
+}
+// footer
+@mixin footer-font($fs, $flh) {
+  font-size: $fs;
+  line-height: $flh;
+}
+@mixin icon-size($w, $h) {
+  width: $w;
+  height: $h;
+}
+@mixin slikns($fw, $fs, $flh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $flh;
+}
+@mixin bordered($color) {
+  border: 1px solid $color;
+}
