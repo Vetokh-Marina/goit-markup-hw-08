@@ -798,6 +798,29 @@ footer {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  .advant-element {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+  }
+  .advant-element:nth-child(2n) {
+    margin-right: 0;
+  }
+  .advant-element:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advant-element {
+    width: calc((100% - 30px * 3) / 4);
+  }
+  .advant-element:not(:last-child) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+
 .advant-item {
   background-color: #f5f4fa;
   height: 120px;
