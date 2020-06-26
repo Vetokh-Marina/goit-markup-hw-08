@@ -1035,7 +1035,6 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -1051,8 +1050,25 @@ img {
           transform: scale(1.1);
 }
 
+.klient-element {
+  width: calc((100% - 30px * 2) / 2);
+  margin: 15px;
+}
+
 .klient-element:not(:last-child) {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .klient-element {
+    width: calc((100% - 30px * 3) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .klient-element {
+    width: calc((100% - 30px * 6) / 6);
+  }
 }
 
 .klient-list .icon-klient {

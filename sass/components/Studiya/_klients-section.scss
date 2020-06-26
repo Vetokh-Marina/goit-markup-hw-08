@@ -2,7 +2,7 @@
 .klient-item {
   @extend %flex;
   justify-content: center;
-  @include icon-size(170px, 90px);
+  height: 90px;
   @include bordered(#afb1b8);
   border-radius: 4px;
   @include tranzition(border-color);
@@ -12,8 +12,20 @@
     @include transform(1.1);
   }
 }
-.klient-element:not(:last-child) {
-  margin-bottom: 30px;
+.klient-element {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  width: calc((100% - 30px * 2) / 2);
+  margin: 15px;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px * 3) / 3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 30px * 6) / 6);
+  }
 }
 .klient-list .icon-klient {
   fill: #afb1b8;
