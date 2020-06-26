@@ -2,6 +2,17 @@ body {
   font-family: $font-body;
   background-color: $white-color;
   color: $primary-text-color;
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 .list {
   list-style: none;
