@@ -1,0 +1,88 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  @extend %logo;
+  font-size: 26px;
+  &-web {
+    color: $accent-text-color;
+  }
+  &-studio {
+    color: $black-color;
+  }
+}
+.site-nav {
+  display: flex;
+  margin-left: 86px;
+  .link {
+    display: inline-flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: $title-text-color;
+    @include fonts(500, 14px, 1, 0.02em);
+    @include tranzition(color);
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+  .current {
+    color: $accent-text-color;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      bottom: 0;
+      background-color: $accent-text-color;
+      border-radius: 2px;
+    }
+  }
+  .item {
+    position: relative;
+    & + .item {
+      margin-left: 50px;
+    }
+  }
+}
+.cont-nav {
+  @extend %inline-flex;
+  margin-left: auto;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  .link {
+    display: inline-flex;
+    align-items: center;
+    @include tranzition(color);
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+  }
+  .item {
+    & + .item {
+      margin-left: 50px;
+    }
+  }
+}
+.icon-mail {
+  fill: $primary-text-color;
+  margin-right: 10px;
+  @include tranzition(fill);
+  .mail:hover &,
+  .mail:focus & {
+    fill: $accent-text-color;
+  }
+}
+.icon-phone {
+  fill: $primary-text-color;
+  margin-right: 10px;
+  @include tranzition(fill);
+  .phone:hover &,
+  .phone:focus & {
+    fill: $accent-text-color;
+  }
+}

@@ -1,0 +1,30 @@
+/* Клиенты */
+.klient-item {
+  @extend %flex;
+  justify-content: center;
+  @include icon-size(170px, 90px);
+  @include bordered(#afb1b8);
+  border-radius: 4px;
+  @include tranzition(border-color);
+  transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    border-color: $accent-text-color;
+    @include transform(1.1);
+  }
+}
+.klient-element:not(:last-child) {
+  margin-bottom: 30px;
+}
+.klient-list .icon-klient {
+  fill: #afb1b8;
+  @include tranzition(fill);
+  transform: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.klient-element:hover .klient-item {
+  border-color: $accent-text-color;
+  transform: scale(1.1);
+}
+.klient-item:hover .icon-klient {
+  fill: $accent-text-color;
+  @include transform(1.1);
+}

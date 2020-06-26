@@ -1,0 +1,17 @@
+@import './utils/variables';
+@import './base/normalize';
+@import './utils/visually-hidden';
+@import './utils/placeholder';
+@import './utils/mixins';
+@import './utils/global-style';
+@import './components/header';
+@import './components/footer';
+@import './components/Studiya/hero-section';
+@import './components/Studiya/advantages-section';
+@import './components/Studiya/doing-section';
+@import './components/Studiya/team-section';
+@import './components/Studiya/klients-section';
+@import './components/Studiya/modal-form';
+@import './components/Portfolio/common';
+@import './components/Portfolio/project-section';
+@import './components/Portfolio/description-section';

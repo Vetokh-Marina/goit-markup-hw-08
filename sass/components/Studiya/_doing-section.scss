@@ -1,0 +1,38 @@
+.doing {
+  &-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include margin(0, 0);
+    padding: 27px;
+    @include fonts(700, 14px, 1, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(47, 48, 58, 0.8);
+    border-radius: 0px 0px 4px 4px;
+    color: $white-color;
+  }
+  &-element {
+    position: relative;
+    width: calc((100% - 30px * 2) / 3);
+    border-radius: 0px 0px 4px 4px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    .list & {
+      position: relative;
+      width: calc((100% - 30px * 2) / 3);
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
+  @media screen and (min-width: 480px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
