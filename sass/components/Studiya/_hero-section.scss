@@ -22,46 +22,42 @@
     padding-top: 200px;
     padding-bottom: 200px;
   }
-  // &-item {
-  //   @extend %item-centr;
-  //   padding-top: 200px;
-  //   text-align: center;
-  // }
-  & .title {
-    margin-top: 0;
-    margin-bottom: 30px;
-    max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
+  &-item {
+    @extend %item-centr;
+    // padding-top: 200px;
+    text-align: center;
+  }
 
+  &-title {
+    @extend %item-centr;
+    @include margin(0, 46px);
+    text-transform: uppercase;
     color: $white-color;
+    width: 360px;
     font-weight: 900;
     font-size: 26px;
-    line-height: 1.6;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-    @media screen and (min-width: $desktop) {
-      max-width: 696px;
-      font-size: 44px;
-      line-height: 1.36;
+    line-height: 1.61;
+    @media screen and(min-width:$desktop) {
+      width: 646px;
+      @include fonts(900, 44px, 1.36, 0.06em);
     }
   }
 }
-.hero-item {
-  margin: 0;
-  margin-bottom: 30px;
-
-  margin-left: auto;
-  margin-right: auto;
-  align-content: center;
-  color: $white-color;
-
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+//Фон с градиентом в секции герой
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  @extend %item-centr;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url('../img/studiya/header_img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .button.primary {
-  margin-top: 30px;
   border: none;
   @extend %inline-flex;
   @include fonts(700, 16px, 1.87, 0.06em);

@@ -57,6 +57,15 @@ footer {
   &::placeholder {
     color: $foot-color;
   }
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 12px;
+    width: 350px;
+    margin-bottom: 0;
+  }
 }
 .copyringht {
   display: none;
@@ -70,6 +79,24 @@ footer {
 }
 .footer-address {
   text-align: center;
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+.footer-block {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc(100% / 2);
+  }
 }
 // соц. сети
 .footer-slikns {
@@ -77,6 +104,14 @@ footer {
   // margin-right: 93px;
   @include slikns(700, 14px, 1.14);
   text-transform: uppercase;
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }
 .slikns-list {
   justify-content: center;
@@ -143,6 +178,17 @@ footer {
   @include icon-size(20px, 20px);
   margin-left: 10px;
 }
+.footer-form {
+  align-items: center;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
 .footer-subscription {
   text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: start;
+    width: calc((100% - 30px) / 2);
+  }
 }
