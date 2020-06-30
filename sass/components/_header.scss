@@ -1,5 +1,8 @@
 .page-header {
   position: relative;
+  @media screen and (max-width: 767px) {
+    height: 60px;
+  }
 }
 .main-nav {
   display: flex;
@@ -40,7 +43,7 @@
   left: 0;
   width: 100%;
 
-  background-color: blueviolet;
+  background-color: $white-color;
   padding: 60px 0;
   text-align: center;
   font-size: 20px;
@@ -54,6 +57,8 @@
 .logo {
   @extend %logo;
   font-size: 26px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   &-web {
     color: $accent-text-color;
   }
@@ -62,21 +67,43 @@
   }
 }
 .site-nav {
-  display: flex;
-  margin-left: 86px;
-  .link {
-    display: inline-flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    color: $title-text-color;
-    @include fonts(500, 14px, 1, 0.02em);
-    @include tranzition(color);
-    &:hover,
-    &:focus {
-      color: $accent-text-color;
+  padding: 0;
+  list-style: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 81px;
+    margin-right: 84px;
+    padding-bottom: 8px;
+    & .item:not(:last-child) {
+      margin-right: 50px;
     }
   }
+  @media screen and (max-width: 767px) {
+    .item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    // display: flex;
+    // margin-left: 86px;
+    .link {
+      display: inline-flex;
+      position: relative;
+
+      // padding-top: 32px;
+      // padding-bottom: 32px;
+
+      color: $title-text-color;
+      @include fonts(500, 18px, 1, 0.02em);
+      @include tranzition(color);
+      &:hover,
+      &:focus {
+        color: $accent-text-color;
+      }
+    }
+  }
+  // .current {
+  //   color: #2196f3;
+  //   padding-bottom: 8px;
+  // }
   .current {
     color: $accent-text-color;
     &::after {
@@ -90,17 +117,21 @@
       border-radius: 2px;
     }
   }
+
   .item {
     position: relative;
-    & + .item {
-      margin-left: 50px;
-    }
+    // & + .item {
+    //   margin-left: 50px;
+    //}
   }
 }
 .cont-nav {
-  @extend %inline-flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  // @extend %inline-flex;
   margin-left: auto;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.02em;
   .link {
     display: inline-flex;
@@ -111,9 +142,22 @@
       color: $accent-text-color;
     }
   }
-  .item {
-    & + .item {
-      margin-left: 50px;
+  // .item {
+  //   & + .item {
+  //     margin-left: 50px;
+  //   }
+  // }
+  @media screen and (max-width: 767px) {
+    .item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+  @media screen and (max-width: 768px) {
+    .item {
+      margin-bottom: 10px;
     }
   }
 }

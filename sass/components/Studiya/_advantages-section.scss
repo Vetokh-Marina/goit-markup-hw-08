@@ -51,7 +51,7 @@
 @media screen and(max-width:768px) {
   .list {
     // @extend %flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     &.advant-list {
       display: flex;
     }

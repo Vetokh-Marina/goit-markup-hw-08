@@ -275,7 +275,7 @@ summary {
   text-decoration: none;
 }
 
-.cont-nav, .button-secondary, .button.primary {
+.button-secondary, .button.primary {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -379,6 +379,12 @@ p {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .page-header {
+    height: 60px;
+  }
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -433,7 +439,7 @@ p {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: blueviolet;
+  background-color: #ffffff;
   padding: 60px 0;
   text-align: center;
   font-size: 20px;
@@ -451,6 +457,8 @@ p {
 
 .logo {
   font-size: 26px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .logo-web {
@@ -462,29 +470,44 @@ p {
 }
 
 .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 86px;
+  padding: 0;
+  list-style: none;
 }
 
-.site-nav .link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: #212121;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0.02em;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 81px;
+    margin-right: 84px;
+    padding-bottom: 8px;
+  }
+  .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
-.site-nav .link:hover, .site-nav .link:focus {
-  color: #2196f3;
+@media screen and (max-width: 767px) {
+  .site-nav .item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .site-nav .link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    color: #212121;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .site-nav .link:hover, .site-nav .link:focus {
+    color: #2196f3;
+  }
 }
 
 .site-nav .current {
@@ -506,13 +529,12 @@ p {
   position: relative;
 }
 
-.site-nav .item + .item {
-  margin-left: 50px;
-}
-
 .cont-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
   margin-left: auto;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 0.02em;
 }
 
@@ -531,8 +553,22 @@ p {
   color: #2196f3;
 }
 
-.cont-nav .item + .item {
-  margin-left: 50px;
+@media screen and (max-width: 767px) {
+  .cont-nav .item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cont-nav {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cont-nav .item {
+    margin-bottom: 10px;
+  }
 }
 
 .icon-mail {
@@ -981,10 +1017,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
   .list.advant-list {
     display: -webkit-box;
     display: -ms-flexbox;
