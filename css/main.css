@@ -511,6 +511,10 @@ p {
 }
 
 .site-nav .current {
+  padding-bottom: 8px;
+}
+
+.site-nav .current {
   color: #2196f3;
 }
 

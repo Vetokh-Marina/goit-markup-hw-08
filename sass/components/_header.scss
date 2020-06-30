@@ -100,10 +100,9 @@
       }
     }
   }
-  // .current {
-  //   color: #2196f3;
-  //   padding-bottom: 8px;
-  // }
+  .current {
+    padding-bottom: 8px;
+  }
   .current {
     color: $accent-text-color;
     &::after {
