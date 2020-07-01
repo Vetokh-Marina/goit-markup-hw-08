@@ -1,10 +1,8 @@
 footer {
   background-color: #2f303a;
   color: $white-color;
-  @media screen and(min-width:$desktop) {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .page-footer {
   @media screen and(min-width:$desktop) {
@@ -154,7 +152,7 @@ footer {
 .slikns-text {
   margin-top: 60px;
   margin-bottom: 20px;
-  @include fonts(700, 14px, 1.14, 0.03em);
+  @include fonts(700, 14px, 1, 0.03em);
   text-transform: uppercase;
   text-align: center;
   @media screen and(min-width:$desktop) {

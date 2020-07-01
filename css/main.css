@@ -641,13 +641,8 @@ p {
 footer {
   background-color: #2f303a;
   color: #ffffff;
-}
-
-@media screen and (min-width: 1200px) {
-  footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -872,7 +867,7 @@ footer {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
@@ -1128,56 +1123,44 @@ footer {
   }
 }
 
-.doing-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 27px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1;
-  letter-spacing: 0.03em;
-  text-align: center;
-  text-transform: uppercase;
-  background: rgba(47, 48, 58, 0.8);
-  border-radius: 0px 0px 4px 4px;
-  color: #ffffff;
-}
-
-.doing-element {
-  position: relative;
-  width: calc((100% - 30px * 2) / 3);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.doing-element:not(:last-child) {
-  margin-right: 30px;
-}
-
-.list .doing-element {
-  position: relative;
-  width: calc((100% - 30px * 2) / 3);
-  border-radius: 0px 0px 4px 4px;
-}
-
-@media screen and (max-width: 480px) {
-  .doing {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .doing {
-    display: none;
-  }
+.doing {
+  display: none;
 }
 
 @media screen and (min-width: 1200px) {
   .doing {
     display: block;
+  }
+  .doing-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 27px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    background: rgba(47, 48, 58, 0.8);
+    border-radius: 0px 0px 4px 4px;
+    color: #ffffff;
+  }
+  .doing-element {
+    position: relative;
+    width: calc((100% - 30px * 2) / 3);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .doing-element:not(:last-child) {
+    margin-right: 30px;
+  }
+  .list .doing-element {
+    position: relative;
+    width: calc((100% - 30px * 2) / 3);
+    border-radius: 0px 0px 4px 4px;
   }
 }
 
