@@ -2,12 +2,13 @@ footer {
   background-color: #2f303a;
   color: $white-color;
 }
-// .page-footer {
-//   display: flex;
-//   align-items: baseline;
-//   padding-top: 48px;
-//   justify-content: space-between;
-// }
+.page-footer {
+  @media screen and(min-width:$desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
 .address-container {
   @include footer-font(14px, 1.7);
   font-style: normal;
@@ -86,6 +87,7 @@ footer {
   @media screen and (min-width: $desktop) {
     margin-right: 30px;
     margin-bottom: 0;
+    text-align: left;
   }
 }
 .footer-block {
@@ -131,6 +133,9 @@ footer {
       transform: scale(1.3);
     }
   }
+  @media screen and(min-width:$desktop) {
+    justify-content: flex-start;
+  }
 }
 .slikns-links {
   &:not(:last-child) {
@@ -146,6 +151,9 @@ footer {
   @include fonts(700, 14px, 1, 0.03em);
   text-transform: uppercase;
   text-align: center;
+  @media screen and(min-width:$desktop) {
+    text-align: left;
+  }
 }
 // кнопка футера
 .button-secondary {
@@ -186,7 +194,7 @@ footer {
     align-items: center;
   }
   @media screen and (min-width: $desktop) {
-    display: flex;
+    display: block;
   }
 }
 

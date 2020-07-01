@@ -42,31 +42,38 @@
 .menu-button.is-open .icon-menu {
   display: none;
 }
+//
 .menu-container {
-  background-color: $white-color;
-  padding: 60px 0;
-  text-align: center;
-  justify-content: space-between;
+  // transition: $transition;
 
-  &.is-open {
-    @media screen and(max-width:767px) {
-      display: block;
-    }
-  }
-  @media screen and(min-width:767px) {
-    display: flex;
-  }
-  @media screen and(max-width:767px) {
+  @media screen and (max-width: $tablet - 1) {
     display: none;
+
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    font-size: 20px;
+
+    background-color: $white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+    padding: 60px 0;
+    text-align: center;
+
+    &.is-open {
+      display: block;
+    }
   }
-  @media screen and(min-width:1199px) {
-    align-items: center;
-    padding: 0 32px 0 32px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 81px;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 85px;
   }
 }
 .logo {

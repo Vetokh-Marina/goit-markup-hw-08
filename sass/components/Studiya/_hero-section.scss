@@ -46,7 +46,7 @@
 //Фон с градиентом в секции герой
 .overlay {
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
   @extend %item-centr;
   background-image: linear-gradient(
       to right,
@@ -56,6 +56,10 @@
     url('../img/studiya/header_img.jpg');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and(min-width:$desktop) {
+    height: 600px;
+  }
 }
 .button.primary {
   border: none;
