@@ -270,7 +270,8 @@ summary {
 .logo, .logo-footer {
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.16;
+  font-size: 24px;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
@@ -676,8 +677,13 @@ footer {
 .logo-footer {
   display: block;
   margin-bottom: 10px;
-  font-size: 22px;
-  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    line-height: 1.19;
+    font-size: 26px;
+  }
 }
 
 .add {
@@ -866,7 +872,7 @@ footer {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
@@ -875,6 +881,7 @@ footer {
 @media screen and (min-width: 1200px) {
   .slikns-text {
     text-align: left;
+    margin-top: 0;
   }
 }
 

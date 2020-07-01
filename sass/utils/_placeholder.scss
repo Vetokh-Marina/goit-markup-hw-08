@@ -1,10 +1,12 @@
 %logo {
   font-family: $font-logo;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.16;
+  font-size: 24px;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+
 %inline-flex {
   display: inline-flex;
   align-items: center;

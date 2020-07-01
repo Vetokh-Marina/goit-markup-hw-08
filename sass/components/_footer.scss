@@ -26,8 +26,10 @@ footer {
     @extend %logo;
     display: block;
     margin-bottom: 10px;
-    font-size: 22px;
-    padding-top: 60px;
+    @media screen and(min-width:$desktop) {
+      line-height: 1.19;
+      font-size: 26px;
+    }
   }
 }
 // контакты футера
@@ -152,11 +154,12 @@ footer {
 .slikns-text {
   margin-top: 60px;
   margin-bottom: 20px;
-  @include fonts(700, 14px, 1, 0.03em);
+  @include fonts(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   text-align: center;
   @media screen and(min-width:$desktop) {
     text-align: left;
+    margin-top: 0;
   }
 }
 // кнопка футера
