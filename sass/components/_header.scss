@@ -1,13 +1,10 @@
 .page-header {
   position: relative;
-  @media screen and (max-width: 767px) {
-    height: 60px;
-  }
-  @media screen and (min-width: 1199px) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-size: 14px;
-  }
+  border-bottom: 1px solid #ececec;
+  // height: 60px;
+  // @media screen and (min-width: 767px) {
+  //   height: 80px;
+  // }
 }
 .main-nav {
   display: flex;
@@ -78,7 +75,6 @@
 }
 .logo {
   @extend %logo;
-  font-size: 26px;
   padding-top: 16px;
   padding-bottom: 16px;
   &-web {
@@ -86,6 +82,15 @@
   }
   &-studio {
     color: $black-color;
+  }
+  @media screen and(min-width:$tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and(min-width:$desktop) {
+    line-height: 1.19;
+    font-size: 26px;
+    letter-spacing: 0.03em;
   }
 }
 .site-nav {

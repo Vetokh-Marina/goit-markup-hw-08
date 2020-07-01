@@ -21,21 +21,18 @@
 .description .description-item {
   border: 1px solid #eeeeee;
   width: 100%;
-  @media screen and(min-width:768px) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $tablet) {
     width: calc((100% - 30px * 2) / 2);
     margin: 15px;
   }
-  @media screen and(min-width:1200px) {
+
+  @media screen and (min-width: $desktop) {
     width: calc((100% - 30px * 3) / 3);
-    // margin-right: 30px;
-    // margin-bottom: 30px;
   }
-}
-.description .description-item:nth-child(3n) {
-  margin-right: 0;
-}
-.description .description-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
 }
 /* многослойная тень на карточках */
 .description .description-item:hover {
