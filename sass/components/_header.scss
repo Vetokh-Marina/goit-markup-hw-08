@@ -5,13 +5,26 @@
   // @media screen and (min-width: 767px) {
   //   height: 80px;
   // }
+  @media screen and(min-width:767px) {
+    display: flex;
+  }
 }
 .main-nav {
   display: flex;
-  align-items: center;
-  @media screen and (max-width: 1199px) {
+  @media screen and(max-width:767px) {
     justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
+  @media screen and(min-width:768px) {
+    margin: 0;
+    padding: 0;
+  }
+
+  // align-items: center;
+  // @media screen and (max-width: 1199px) {
+  //   justify-content: space-between;
+  // }
 }
 
 .menu-button {
@@ -39,11 +52,9 @@
 .menu-button.is-open .icon-menu {
   display: none;
 }
-//
 .menu-container {
-  // transition: $transition;
-
-  @media screen and (max-width: $tablet - 1) {
+  z-index: 1;
+  @media screen and (max-width: 767px) {
     display: none;
 
     position: absolute;
@@ -65,18 +76,16 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     margin-left: 81px;
-    justify-content: space-between;
-    flex-grow: 1;
+    align-items: center;
   }
 
-  @media screen and (min-width: $desktop) {
-    margin-left: 85px;
-  }
+  // @media screen and (min-width: $desktop) {
+  //   margin-left: 85px;
+  // }
 }
 .logo {
   @extend %logo;
-  padding-top: 16px;
-  padding-bottom: 16px;
+
   &-web {
     color: $accent-text-color;
   }
@@ -96,12 +105,30 @@
 .site-nav {
   padding: 0;
   list-style: none;
+  .link {
+    display: inline-flex;
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $title-text-color;
+    @include fonts(500, 18px, 1, 0.02em);
+    @include tranzition(color);
+    &:hover,
+    &:focus {
+      color: $accent-text-color;
+    }
+    @media screen and(min-width:767px) {
+      @include fonts(500, 14px, 1.14, 0.02em);
+    }
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     margin-left: 81px;
     margin-right: 84px;
-    & .item:not(:last-child) {
-      margin-right: 50px;
+    .item {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
     }
   }
   @media screen and (max-width: 767px) {
@@ -110,24 +137,6 @@
     }
     // display: flex;
     // margin-left: 86px;
-    .link {
-      display: inline-flex;
-      position: relative;
-
-      // padding-top: 32px;
-      // padding-bottom: 32px;
-
-      color: $title-text-color;
-      @include fonts(500, 18px, 1, 0.02em);
-      @include tranzition(color);
-      &:hover,
-      &:focus {
-        color: $accent-text-color;
-      }
-    }
-  }
-  .current {
-    padding-bottom: 8px;
   }
   .current {
     color: $accent-text-color;
@@ -158,6 +167,10 @@
   margin-left: auto;
   font-size: 18px;
   letter-spacing: 0.02em;
+  @media screen and (min-width: 767px) {
+    font-size: 12px;
+    letter-spacing: 1.16px;
+  }
   .link {
     display: inline-flex;
     align-items: center;
