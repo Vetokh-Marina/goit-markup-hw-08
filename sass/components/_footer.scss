@@ -1,6 +1,10 @@
 footer {
   background-color: #2f303a;
   color: $white-color;
+  @media screen and(min-width:$desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .page-footer {
   @media screen and(min-width:$desktop) {
