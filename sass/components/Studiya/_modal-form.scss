@@ -32,7 +32,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 450px;
+    max-width: 528px;
   }
 }
 .modal > .modal-close {
@@ -74,13 +74,12 @@
   position: absolute;
   top: 12px;
   left: 42px;
-  @include slikns(20px, 1.5, 0.03em);
   color: $primary-text-color;
   @include tranzition(transform);
   @include tranzition(color);
-  @media screen and (min-width: $desktop) {
-    @include slikns(20px, 1.15, 0.03em);
-  }
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
 }
 .form-field {
   position: relative;
