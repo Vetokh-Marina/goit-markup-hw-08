@@ -91,6 +91,7 @@
     }
   }
   @media screen and (min-width: $tablet) {
+    padding: 0;
     display: flex;
 
     & .item:not(:last-child) {
@@ -143,6 +144,7 @@
 }
 .cont-nav {
   margin: 0;
+  padding: 0;
   list-style: none;
   @media screen and (max-width: 767px) {
     & .item:not(:last-child) {
@@ -151,6 +153,7 @@
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding-right: 15px;
     & .item:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -171,8 +174,8 @@
   @media screen and (min-width: $tablet) {
     padding-top: 21px;
     padding-bottom: 21px;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
   }
 
   @media screen and (min-width: $desktop) {
